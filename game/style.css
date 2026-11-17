@@ -1,0 +1,48 @@
+/* Orbital Sentinel — page chrome around the canvas. The game itself is
+   drawn on the canvas; this only centers it and keeps the page dark. */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #040712;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.stage {
+  width: min(1280px, 100vw);
+  padding: 12px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #2c3d6e;
+  border-radius: 10px;
+  background: #070b1a;
+  cursor: crosshair;
+  outline: none;
+}
+
+canvas:focus-visible {
+  border-color: #6ff2ff;
+}
+
+.hint {
+  margin: 10px 4px 0;
+  color: #9fb0d8;
+  font-size: 14px;
+  text-align: center;
+}
